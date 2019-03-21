@@ -1,0 +1,31 @@
+{
+    "name": "jclaud/coding-challenge",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "league/oauth2-client": "dev-master",
+        "ixudra/curl": "dev-master",
+        "cboden/ratchet": "dev-master",
+        "vlucas/phpdotenv": "^3.3@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "nohup php -s socket.php . &"
+        ]
+    }
+}
